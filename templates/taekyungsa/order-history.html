@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/reset.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/common.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비게이션 바 (GNB) -->
+      <nav class="navbar">
+        <div class="navbar__content">
+          <div class="left">
+            <a href="" class="logo__button">ADMINISTRATOR</a>
+            <div class="category__container">
+              <div class="category__item">
+                <span>회원관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>주문관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>상품관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>학교관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <a href="">
+              <span>내 홈페이지</span>
+            </a>
+            <a href="">
+              <span>관리자홈</span>
+            </a>
+            <button class="logout-button">로그아웃</button>
+          </div>
+        </div>
+      </nav>
+      <!-- //네비게이션 바 (GNB) -->
+
+      <!-- 콘텐츠 -->
+      <div class="content">
+        <div class="order-history">
+          <div class="filter__container">
+            <div class="status__container">
+              <div class="left">진행상태</div>
+              <div class="right status">
+                <div class="grid">
+                  <button class="active">전체</button>
+                  <button>주문접수</button>
+                  <button>입금완료</button>
+                  <button>배송준비중</button>
+                  <button>배송처리</button>
+                  <button>배송완료</button>
+                  <button>주문취소</button>
+                  <button>미주문</button>
+                  <button>취소요청</button>
+                  <button>취소완료</button>
+                  <button>교환요청</button>
+                  <button>교환완료</button>
+                </div>
+              </div>
+            </div>
+            <div class="period">
+              <div class="left">기간</div>
+              <div class="right">
+                <div class="date__select-container">
+                  <div class="date__wrapper">
+                    <input type="date" />
+                  </div>
+                  <span>~</span>
+                  <div class="date__wrapper">
+                    <input type="date" />
+                  </div>
+                </div>
+                <div class="button__container">
+                  <button type="button" class="active">오늘</button>
+                  <button type="button">어제</button>
+                  <button type="button">1주일</button>
+                  <button type="button">1개월</button>
+                </div>
+              </div>
+            </div>
+            <div class="search">
+              <div class="left">조건검색</div>
+              <div class="right">
+                <div class="dropdown">
+                  <div class="selected">
+                    주문자명
+                    <img
+                      src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down.svg"
+                      alt="드롭다운 화살표"
+                      class="triangle"
+                    />
+                  </div>
+                  <div class="dropdown-menu">
+                    <div>주문자명</div>
+                    <div>주문번호</div>
+                    <div>휴대폰</div>
+                    <div>입금자명</div>
+                  </div>
+                </div>
+                <div class="input__container">
+                  <input type="text" />
+                </div>
+                <button type="button" class="search__button">검색</button>
+              </div>
+            </div>
+          </div>
+          <div class="order-table__container">
+            <div class="header">
+              <div class="status">
+                <div class="status__item">
+                  <div class="color" style="background-color: gray"></div>
+                  <span>결제완료</span>
+                </div>
+                <div class="status__item">
+                  <div class="color" style="background-color: blue"></div>
+                  <span>주문완료</span>
+                </div>
+                <div class="status__item">
+                  <div class="color" style="background-color: red"></div>
+                  <span>주문취소</span>
+                </div>
+              </div>
+              <button type="button" id="excelSaveButton" class="excel__button">
+                엑셀파일저장
+              </button>
+            </div>
+            <div class="order-table__wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" /></th>
+                    <th>주문번호</th>
+                    <th>주문자명</th>
+                    <th>주문방법</th>
+                    <th>주문금액</th>
+                    <th>주문상태</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>240627102492745</td>
+                    <td>홍길동</td>
+                    <td>계좌이체</td>
+                    <td>18,000원</td>
+                    <td>
+                      <div class="dropdown">
+                        <div class="selected">
+                          주문상태
+                          <img
+                            src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down.svg"
+                            alt="드롭다운 화살표"
+                            class="triangle"
+                          />
+                        </div>
+                        <div class="dropdown-menu">
+                          <div>배송완료</div>
+                          <div>주문취소</div>
+                          <div>취소완료</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="footer">
+              <button type="button" id="deleteSelectedButton">
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Add_round.svg"
+                  alt="추가"
+                />
+                <span>선택삭제</span>
+              </button>
+              <button type="button" id="updateStatusAllButton">
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Add_round.svg"
+                  alt="추가"
+                />
+                <span>상태일괄변경</span>
+              </button>
+              <button type="button" id="printOrderFormButton">
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Add_round.svg"
+                  alt="추가"
+                />
+                <span>주문서출력</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="pagination">
+          <button class="pagination__button-prev">
+            <img
+              src="../../static/taekyungsa/images/icon/svg/Expand_left_double.svg"
+            />
+          </button>
+          <button class="pagination__button pagination__button--active">
+            1
+          </button>
+          <button class="pagination__button">2</button>
+          <button class="pagination__button">3</button>
+          <button class="pagination__button">4</button>
+          <button class="pagination__button">5</button>
+          <button class="pagination__button-next">
+            <img
+              src="../../static/taekyungsa/images/icon/svg/Expand_right_double.svg"
+            />
+          </button>
+        </div>
+        <!-- //페이지네이션 -->
+      </div>
+      <!-- //콘텐츠 -->
+    </div>
+
+    <!-- 엑셀파일저장 모달 -->
+    <div class="modal-excel-save">
+      <div class="modal-excel-save__content">
+        <h3>주문정보 다운로드</h3>
+        <div class="select__container">
+          <div class="category">
+            <div class="left">선택구분</div>
+            <div class="right">
+              <label for="">
+                <input type="radio" name="category" value="all" checked />
+                기본선택
+              </label>
+              <label for="">
+                <input type="radio" name="category" value="selected" />
+                전체선택
+              </label>
+            </div>
+          </div>
+          <div class="order-info">
+            <div class="left">주문정보</div>
+            <div class="right">
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                주문번호
+              </label>
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                주문상품
+              </label>
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                총결제금액
+              </label>
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                결제방법
+              </label>
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                주문일자
+              </label>
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                결제계좌
+              </label>
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                운송장번호
+              </label>
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                입금인
+              </label>
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                처리상태
+              </label>
+              <label for="">
+                <input type="checkbox" name="order-info" />
+                관리자메모
+              </label>
+            </div>
+          </div>
+          <div class="customer-info">
+            <div class="left">주문자정보</div>
+            <div class="right">
+              <label for="">
+                <input type="checkbox" name="customer-info" />
+                주문자명
+              </label>
+              <label for="">
+                <input type="checkbox" name="customer-info" />
+                주문자 이메일
+              </label>
+              <label for="">
+                <input type="checkbox" name="customer-info" />
+                주문자 전화번호
+              </label>
+              <label for="">
+                <input type="checkbox" name="customer-info" />
+                주문자 휴대폰
+              </label>
+              <label for="">
+                <input type="checkbox" name="customer-info" />
+                주문자 우편번호
+              </label>
+              <label for="">
+                <input type="checkbox" name="customer-info" />
+                주문자 주소
+              </label>
+            </div>
+          </div>
+          <div class="recipient-info">
+            <div class="left">수취인정보</div>
+            <div class="right">
+              <label for="">
+                <input type="checkbox" name="recipient-info" />
+                수취인명
+              </label>
+              <label for="">
+                <input type="checkbox" name="recipient-info" />
+                수취인 전화번호
+              </label>
+              <label for="">
+                <input type="checkbox" name="recipient-info" />
+                수취인 휴대폰
+              </label>
+              <label for="">
+                <input type="checkbox" name="recipient-info" />
+                수취인 우편번호
+              </label>
+              <label for="">
+                <input type="checkbox" name="recipient-info" />
+                수취인주소
+              </label>
+              <label for="">
+                <input type="checkbox" name="recipient-info" />
+                수취인요청사항
+              </label>
+              <label for="">
+                <input type="checkbox" name="recipient-info" />
+                주문취소사유
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="button__container">
+          <button type="button" class="confirm-button">확인</button>
+          <button type="button" class="close-button">닫기</button>
+        </div>
+      </div>
+    </div>
+    <!-- //엑셀파일저장 모달 -->
+
+    <!-- 삭제할 주문을 선택하지 않았습니다. 모달 -->
+    <div id="deleteBlankModal" class="modal">
+      <div class="modal__content">
+        <div class="modal__message-container">
+          <span class="modal__message">
+            삭제할 주문을 선택하지 않았습니다.
+          </span>
+        </div>
+        <button type="button" class="close-button">확인</button>
+      </div>
+    </div>
+    <!-- //삭제할 주문을 선택하지 않았습니다. 모달 -->
+
+    <!-- 주문상태 일괄처리 모달 -->
+    <div id="updateAllModal" class="modal-update-all">
+      <div class="modal-update-all__content">
+        <h3>주문상태 일괄처리</h3>
+        <div class="select__container">
+          <span>상태선택</span>
+          <div class="dropdown">
+            <div class="selected">
+              주문상태
+              <img
+                src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down.svg"
+                alt="드롭다운 화살표"
+                class="triangle"
+              />
+            </div>
+            <div class="dropdown-menu">
+              <div>배송완료</div>
+              <div>주문취소</div>
+              <div>취소완료</div>
+            </div>
+          </div>
+        </div>
+        <div class="message__container">
+          <span
+            >주문취소 및 취소완료된 주문은<br />상태가 변경되지 않습니다.</span
+          >
+        </div>
+        <div class="button__container">
+          <button type="button" class="submit-button">제출</button>
+        </div>
+      </div>
+    </div>
+    <!-- //주문상태 일괄처리 모달 -->
+
+    <!-- 변경할 주문을 선택하지 않았습니다. 모달 -->
+    <div id="updateBlankModal" class="modal">
+      <div class="modal__content">
+        <div class="modal__message-container">
+          <span class="modal__message">
+            변경할 주문을 선택하지 않았습니다.
+          </span>
+        </div>
+        <button type="button" class="close-button">확인</button>
+      </div>
+    </div>
+    <!-- //변경할 주문을 선택하지 않았습니다. 모달 -->
+
+    <!-- 선택한 주문을 정말 삭제하시겠습니까? 모달 -->
+    <div class="modal-delete-confirm">
+      <div class="modal-delete-confirm__content">
+        <div class="message__container">
+          <span class="message">선택한 주문을 정말 삭제하시겠습니까?</span>
+        </div>
+        <div class="button__container">
+          <button type="button" class="confirm-button">예</button>
+          <button type="button" class="cancel-button">아니요</button>
+        </div>
+      </div>
+    </div>
+    <!-- //선택한 주문을 정말 삭제하시겠습니까? 모달 -->
+
+    <!-- 스크립트 -->
+    <script src="../../static/taekyungsa/js/dropdown/dropdown.js"></script>
+    <script src="../../static/taekyungsa/js/order-history/order-history.js"></script>
+  </body>
+</html>

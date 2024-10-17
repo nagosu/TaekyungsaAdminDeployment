@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/reset.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/common.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비게이션 바 (GNB) -->
+      <nav class="navbar">
+        <div class="navbar__content">
+          <div class="left">
+            <a href="" class="logo__button">ADMINISTRATOR</a>
+            <div class="category__container">
+              <div class="category__item">
+                <span>회원관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>주문관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>상품관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>학교관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <a href="">
+              <span>내 홈페이지</span>
+            </a>
+            <a href="">
+              <span>관리자홈</span>
+            </a>
+            <button class="logout-button">로그아웃</button>
+          </div>
+        </div>
+      </nav>
+      <!-- //네비게이션 바 (GNB) -->
+
+      <!-- 컨텐츠 -->
+      <div class="content">
+        <div class="school-management">
+          <div class="title__container">
+            <div class="square"></div>
+            <h2>학교 관리</h2>
+          </div>
+
+          <div class="school-table__wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th>지역</th>
+                  <th>중/고등학교</th>
+                  <th>학교명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td>서울특별시</td>
+                  <td>고등학교</td>
+                  <td>길음 고등학교</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="school-table__footer">
+            <button id="schoolAddButton" type="button">추가</button>
+            <button id="schoolEditButton" type="button">수정</button>
+            <button id="schoolDeleteButton" type="button">삭제</button>
+          </div>
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="pagination">
+          <button class="pagination__button-prev">
+            <img
+              src="../../static/taekyungsa/images/icon/svg/Expand_left_double.svg"
+            />
+          </button>
+          <button class="pagination__button pagination__button--active">
+            1
+          </button>
+          <button class="pagination__button">2</button>
+          <button class="pagination__button">3</button>
+          <button class="pagination__button">4</button>
+          <button class="pagination__button">5</button>
+          <button class="pagination__button-next">
+            <img
+              src="../../static/taekyungsa/images/icon/svg/Expand_right_double.svg"
+            />
+          </button>
+        </div>
+        <!-- //페이지네이션 -->
+
+        <!-- 학교 추가 모달 -->
+        <div id="schoolAddModal" class="modal-school-add">
+          <div class="modal-school-add__content">
+            <div class="content__container">
+              <h3>학교 추가</h3>
+              <div class="input__container">
+                <span>지역</span>
+                <select>
+                  <option>서울특별시</option>
+                  <option>경기도</option>
+                  <option>충청도</option>
+                  <option>경상도</option>
+                  <option>강원도</option>
+                  <option>전라도</option>
+                  <option>제주도</option>
+                </select>
+              </div>
+              <div class="input__container">
+                <span>구분</span>
+                <select>
+                  <option>중/고등학교</option>
+                  <option>중학교</option>
+                  <option>고등학교</option>
+                </select>
+              </div>
+              <div class="input__container">
+                <span>학교명</span>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="button__container">
+              <button type="button" class="confirm-button">예</button>
+              <button type="button" class="cancel-button">아니요</button>
+            </div>
+          </div>
+        </div>
+        <!-- //학교 추가 모달 -->
+
+        <!-- 학교 추가 모달 -->
+        <div id="schoolEditModal" class="modal-school-edit">
+          <div class="modal-school-edit__content">
+            <div class="content__container">
+              <h3>학교 수정</h3>
+              <div class="input__container">
+                <span>지역</span>
+                <select>
+                  <option selected>서울특별시</option>
+                  <option>경기도</option>
+                  <option>충청도</option>
+                  <option>경상도</option>
+                  <option>강원도</option>
+                  <option>전라도</option>
+                  <option>제주도</option>
+                </select>
+              </div>
+              <div class="input__container">
+                <span>구분</span>
+                <select>
+                  <option>중/고등학교</option>
+                  <option>중학교</option>
+                  <option selected>고등학교</option>
+                </select>
+              </div>
+              <div class="input__container">
+                <span>학교명</span>
+                <input type="text" value="길음고등학교" />
+              </div>
+            </div>
+            <div class="button__container">
+              <button type="button" class="confirm-button">예</button>
+              <button type="button" class="cancel-button">아니요</button>
+            </div>
+          </div>
+        </div>
+        <!-- //학교 추가 모달 -->
+
+        <!-- 삭제 하시겠습니까? 모달 -->
+        <div id="deleteConfirmModal" class="modal-delete-confirm">
+          <div class="modal-delete-confirm__content">
+            <div class="message__container">
+              <span class="message">삭제 하시겠습니까?</span>
+            </div>
+            <div class="button__container">
+              <button type="button" class="confirm-button">예</button>
+              <button type="button" class="cancel-button">아니요</button>
+            </div>
+          </div>
+        </div>
+        <!-- //삭제 하시겠습니까? 모달 -->
+      </div>
+      <!-- //컨텐츠 -->
+    </div>
+
+    <!-- 스크립트 -->
+    <script src="../../static/taekyungsa/js/school-management/school-management.js"></script>
+  </body>
+</html>

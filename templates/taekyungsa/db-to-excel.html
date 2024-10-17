@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/reset.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/common.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비게이션 바 (GNB) -->
+      <nav class="navbar">
+        <div class="navbar__content">
+          <div class="left">
+            <a href="" class="logo__button">ADMINISTRATOR</a>
+            <div class="category__container">
+              <div class="category__item">
+                <span>회원관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>주문관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>상품관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>학교관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <a href="">
+              <span>내 홈페이지</span>
+            </a>
+            <a href="">
+              <span>관리자홈</span>
+            </a>
+            <button class="logout-button">로그아웃</button>
+          </div>
+        </div>
+      </nav>
+      <!-- //네비게이션 바 (GNB) -->
+
+      <!-- 컨텐츠 -->
+      <div class="content">
+        <div class="db-to-excel">
+          <div class="title__container">
+            <div class="square"></div>
+            <h2>DB 엑셀 변환</h2>
+          </div>
+          <div class="db-to-excel__content">
+            <div class="sub-title__container">
+              <div class="line"></div>
+              <h3>DB 엑셀 변환</h3>
+            </div>
+            <div class="header">
+              <div class="filter__container">
+                <div class="date__filter">
+                  <div class="date__wrapper">
+                    <input type="text" placeholder="Ex) 240417" />
+                  </div>
+                  <span class="">부터</span>
+                  <div class="date__wrapper">
+                    <input type="text" placeholder="Ex) 240420" />
+                  </div>
+                  <span class="">까지</span>
+                </div>
+                <div class="query__container">
+                  <div class="dropdown">
+                    <div class="selected">
+                      연번
+                      <img
+                        src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down.svg"
+                        alt="드롭다운 화살표"
+                        class="triangle"
+                      />
+                    </div>
+                    <div class="dropdown-menu">
+                      <div>연번</div>
+                      <div>이름</div>
+                      <div>전화번호</div>
+                      <div>주소</div>
+                    </div>
+                  </div>
+                  <div class="input__container">
+                    <input type="text" placeholder="텍스트 입력" />
+                    <img
+                      src="../../static/taekyungsa/images/icon/svg/Search_light.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <button class="download-button">DB엑셀 다운</button>
+            </div>
+            <div class="db-table__wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>연번</th>
+                    <th>주문일</th>
+                    <th>지역</th>
+                    <th>학교명</th>
+                    <th>입학<br />년도</th>
+                    <th>체육복<br />색상</th>
+                    <th>이름</th>
+                    <th>입금<br />자명</th>
+                    <th>금액</th>
+                    <th>전화<br />번호</th>
+                    <th>동복<br />상의</th>
+                    <th>동복<br />하의</th>
+                    <th>하복<br />상의</th>
+                    <th>하복<br />하의</th>
+                    <th>기모<br />바지</th>
+                    <th>하복<br />긴바지</th>
+                    <th>맨투맨</th>
+                    <th>기모<br />후드</th>
+                    <th>춘추<br />후드</th>
+                    <th>동하복<br />세트</th>
+                    <th>주소</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>241008153508287</td>
+                    <td>2024.10.18</td>
+                    <td>서울특별시</td>
+                    <td>길음중학교</td>
+                    <td>2021</td>
+                    <td>빨강</td>
+                    <td>홍길동</td>
+                    <td>엔디고</td>
+                    <td>53000</td>
+                    <td>010-2271-3031</td>
+                    <td>90(1)</td>
+                    <td>110(2)</td>
+                    <td>85(1)</td>
+                    <td>90(1)</td>
+                    <td>90(1)</td>
+                    <td>90(1), 95(1)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>서울 성북구 길음로 119<br />215동 1404호</td>
+                  </tr>
+                  <tr>
+                    <td>241008153508287</td>
+                    <td>2024.10.18</td>
+                    <td>서울특별시</td>
+                    <td>길음중학교</td>
+                    <td>2021</td>
+                    <td>빨강</td>
+                    <td>홍길동</td>
+                    <td>엔디고</td>
+                    <td>53000</td>
+                    <td>010-2271-3031</td>
+                    <td>90(1)</td>
+                    <td>110(2)</td>
+                    <td>85(1)</td>
+                    <td>90(1)</td>
+                    <td>90(1)</td>
+                    <td>90(1), 95(1)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>서울 성북구 길음로 119<br />215동 1404호</td>
+                  </tr>
+                  <tr>
+                    <td>241008153508287</td>
+                    <td>2024.10.18</td>
+                    <td>서울특별시</td>
+                    <td>길음중학교</td>
+                    <td>2021</td>
+                    <td>빨강</td>
+                    <td>홍길동</td>
+                    <td>엔디고</td>
+                    <td>53000</td>
+                    <td>010-2271-3031</td>
+                    <td>90(1)</td>
+                    <td>110(2)</td>
+                    <td>85(1)</td>
+                    <td>90(1)</td>
+                    <td>90(1)</td>
+                    <td>90(1), 95(1)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>서울 성북구 길음로 119<br />215동 1404호</td>
+                  </tr>
+                  <tr>
+                    <td>241008153508287</td>
+                    <td>2024.10.18</td>
+                    <td>서울특별시</td>
+                    <td>길음중학교</td>
+                    <td>2021</td>
+                    <td>빨강</td>
+                    <td>홍길동</td>
+                    <td>엔디고</td>
+                    <td>53000</td>
+                    <td>010-2271-3031</td>
+                    <td>90(1)</td>
+                    <td>110(2)</td>
+                    <td>85(1)</td>
+                    <td>90(1)</td>
+                    <td>90(1)</td>
+                    <td>90(1), 95(1)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>서울 성북구 길음로 119<br />215동 1404호</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="pagination">
+          <button class="pagination__button-prev">
+            <img
+              src="../../static/taekyungsa/images/icon/svg/Expand_left_double.svg"
+            />
+          </button>
+          <button class="pagination__button pagination__button--active">
+            1
+          </button>
+          <button class="pagination__button">2</button>
+          <button class="pagination__button">3</button>
+          <button class="pagination__button">4</button>
+          <button class="pagination__button">5</button>
+          <button class="pagination__button-next">
+            <img
+              src="../../static/taekyungsa/images/icon/svg/Expand_right_double.svg"
+            />
+          </button>
+        </div>
+        <!-- //페이지네이션 -->
+      </div>
+      <!-- //컨텐츠 -->
+    </div>
+
+    <!-- 스크립트 -->
+    <script src="../../static/taekyungsa/js/dropdown/dropdown.js"></script>
+  </body>
+</html>

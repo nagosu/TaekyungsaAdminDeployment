@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/reset.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/common.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비게이션 바 (GNB) -->
+      <nav class="navbar">
+        <div class="navbar__content">
+          <div class="left">
+            <a href="" class="logo__button">ADMINISTRATOR</a>
+            <div class="category__container">
+              <div class="category__item">
+                <span>회원관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>주문관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>상품관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>학교관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <a href="">
+              <span>내 홈페이지</span>
+            </a>
+            <a href="">
+              <span>관리자홈</span>
+            </a>
+            <button class="logout-button">로그아웃</button>
+          </div>
+        </div>
+      </nav>
+      <!-- //네비게이션 바 (GNB) -->
+
+      <!-- 컨텐츠 -->
+      <div class="content">
+        <div class="chatbot-setting">
+          <div class="title__container">
+            <div class="square"></div>
+            <h2>챗봇 관리</h2>
+          </div>
+
+          <div class="chatbot__content">
+            <div class="sub-title__container">
+              <div class="line"></div>
+              <h3>챗봇 설정</h3>
+            </div>
+
+            <div class="input-item__container">
+              <div class="dot"></div>
+              <div class="content__wrapper">
+                <h3>GPT 버전</h3>
+                <div class="radio">
+                  <div class="radio__wrapper">
+                    <input type="radio" name="gpt" id="gpt-3.5" checked />
+                    <label for="gpt-3.5">3.5</label>
+                  </div>
+                  <div class="radio__wrapper">
+                    <input type="radio" name="gpt" id="gpt-4.0" />
+                    <label for="gpt-4.0">4.0</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-item__container">
+              <div class="dot"></div>
+              <div class="content__wrapper">
+                <h3>AI 인사 메시지</h3>
+                <textarea
+                  placeholder="AI 메시지를 입력하세요. 비어있으면 GPT 답변 응답을 합니다.&#10;내용이 있으면 GPT 응답이 아닌 입력된 내용으로만 응답을 합니다."
+                ></textarea>
+              </div>
+            </div>
+            <div class="input-item__container">
+              <div class="dot"></div>
+              <div class="content__wrapper">
+                <h3>지침 데이터 입력</h3>
+                <textarea
+                  placeholder="AI 챗봇 학습에 필요한 지침(시스템 요청)을 입력하세요."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //컨텐츠 -->
+    </div>
+  </body>
+</html>

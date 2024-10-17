@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/reset.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/common.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 네비게이션 바 (GNB) -->
+      <nav class="navbar">
+        <div class="navbar__content">
+          <div class="left">
+            <a href="" class="logo__button">ADMINISTRATOR</a>
+            <div class="category__container">
+              <div class="category__item">
+                <span>회원관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>주문관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>상품관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+              <div class="category__item">
+                <span>학교관리</span>
+                <img
+                  src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down_big.svg"
+                  alt="열기"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <a href="">
+              <span>내 홈페이지</span>
+            </a>
+            <a href="">
+              <span>관리자홈</span>
+            </a>
+            <button class="logout-button">로그아웃</button>
+          </div>
+        </div>
+      </nav>
+      <!-- //네비게이션 바 (GNB) -->
+
+      <!-- 컨텐츠 -->
+      <div class="content">
+        <div class="product-add">
+          <div class="title__container">
+            <div class="square"></div>
+            <h2>상품등록</h2>
+            <span>상품 상세정보를 설정합니다.</span>
+          </div>
+
+          <div class="sub-title__container">
+            <div class="line"></div>
+            <h3>기본정보</h3>
+          </div>
+
+          <div class="basic__container">
+            <div class="row">
+              <div class="left category">
+                <div class="title__container">상품분류</div>
+                <div class="content__container">
+                  <div class="dropdown">
+                    <div class="selected">
+                      대분류
+                      <img
+                        src="../../static/taekyungsa/images/icon/svg/Arrow_drop_down.svg"
+                        alt="드롭다운 화살표"
+                        class="triangle"
+                      />
+                    </div>
+                    <div class="dropdown-menu">
+                      <div>00중학교(체육복)</div>
+                      <div>00고등학교(체육복)</div>
+                      <div>00고등학교(체육복)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right sell-amount">
+                <div class="title__container">판매가</div>
+                <div class="content__container">
+                  <div class="input__container">
+                    <input type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="left product-name">
+                <div class="title__container">상품명</div>
+                <div class="content__container">
+                  <div class="input__container">
+                    <input type="text" />
+                  </div>
+                </div>
+              </div>
+              <div class="right product-display">
+                <div class="title__container">상품진열</div>
+                <div class="content__container">
+                  <label for="">
+                    <input type="radio" name="product-display" checked />
+                    <span>진열함</span>
+                  </label>
+                  <label for="">
+                    <input type="radio" name="product-display" />
+                    <span>진열안함</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sub-title__container">
+            <div class="line"></div>
+            <h3>상품옵션</h3>
+          </div>
+
+          <div class="option__container">
+            <div class="row">
+              <div class="left">일반옵션 1</div>
+              <div class="right">
+                <div class="option">
+                  <span>옵션명 : </span>
+                  <input class="first" type="text" value="사이즈" />
+                </div>
+                <div class="option">
+                  <span>옵션 : </span>
+                  <input
+                    type="text"
+                    class="second"
+                    value="85, 95, 100, 105, 110, 115, 120, 130, 140"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="left">일반옵션 2</div>
+              <div class="right">
+                <div class="option">
+                  <span>옵션명 : </span>
+                  <input class="first" type="text" value="입학년도" />
+                </div>
+                <div class="option">
+                  <span>옵션 : </span>
+                  <input type="text" class="second" value="2022, 2023, 2024" />
+                </div>
+              </div>
+            </div>
+            <div class="row last">
+              <div class="left">일반옵션 3</div>
+              <div class="right">
+                <div class="option">
+                  <span>옵션명 : </span>
+                  <input class="first" type="text" />
+                </div>
+                <div class="option">
+                  <span>옵션 : </span>
+                  <input type="text" class="second" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="button__container">
+            <button type="button" class="confirm-button">확인</button>
+            <button type="button" class="list-button">목록</button>
+          </div>
+        </div>
+      </div>
+      <!-- //컨텐츠 -->
+    </div>
+
+    <!-- 스크립트 -->
+    <script src="../../static/taekyungsa/js/dropdown/dropdown.js"></script>
+  </body>
+</html>

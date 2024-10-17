@@ -1,0 +1,311 @@
+:root {
+  --primary-color: #142127;
+  --primary-hover-color: #254652;
+  --primary-highlight-color: rgba(236, 240, 244, 0.19);
+  --primary-button-color: #1b3133;
+  --primary-button-hover-color: #1e5558;
+  --border-light-color: #ccc;
+  --modal-button-color: #7749f8;
+  --modal-button-hover-color: #5f3dc4;
+  --background-main-color: #f8f8f8;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-main-color);
+}
+
+/* Navbar (GNB) */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-light-color);
+  z-index: 100;
+}
+
+.navbar .navbar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.navbar .navbar__content .left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar .navbar__content .right {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.navbar .navbar__content .right a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.navbar .navbar__content .right .logout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: var(--primary-button-color);
+  border-radius: 5px;
+}
+
+.navbar__content .left .logo__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-button-color);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.navbar__content .left .category__container {
+  display: flex;
+  gap: 60px;
+}
+
+.navbar__content .left .category__container .category__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.navbar__content .left .category__container .category__item img {
+  width: 30px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 70px);
+  padding: 30px;
+  margin-top: 70px;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(50%);
+  display: flex;
+  width: 350px;
+  height: 35px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.pagination__button-prev {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1.2px solid #1b00ff;
+  border-right: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #111;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  user-select: none;
+  overflow: hidden;
+
+  &:hover {
+    background-color: #1b00ff;
+    border-color: #1b00ff;
+  }
+}
+
+.pagination__button {
+  display: flex;
+  flex: 1;
+  width: 50px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1.2px solid #1b00ff;
+  border-right: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #111;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  user-select: none;
+
+  &:hover {
+    color: #fff;
+    background-color: #1b00ff;
+  }
+}
+
+.pagination__number-wrapper {
+  display: flex;
+  width: 250px;
+  height: 100%;
+}
+
+.pagination__button-next {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1.2px solid #1b00ff;
+  border-top-left-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #111;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  user-select: none;
+
+  &:hover {
+    background-color: #1b00ff;
+  }
+}
+
+.pagination__button-prev img,
+.pagination__button-next img {
+  transition: filter 0.3s;
+}
+
+.pagination__button-prev:hover img,
+.pagination__button-next:hover img {
+  filter: invert(100%);
+}
+
+.pagination__button--active {
+  color: #fff;
+  background-color: #1b00ff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s;
+}
+
+.modal .modal__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-main-color);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  height: 140px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s;
+}
+
+.modal .modal__message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: var(--background-main-color);
+}
+
+.modal .modal__message {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111;
+  white-space: nowrap;
+}
+
+.modal .close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  background-color: var(--modal-button-color);
+  transition: background-color 0.3s;
+}
+
+.modal .close-button:hover {
+  background-color: var(--modal-button-hover-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

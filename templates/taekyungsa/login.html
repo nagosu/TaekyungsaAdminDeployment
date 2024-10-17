@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/reset.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/common.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/styles.css" />
+    <link rel="stylesheet" href="../../static/taekyungsa/css/login/login.css" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <div class="container">
+    <!-- 로그인 폼 -->
+    <div class="login__container">
+      <div class="login__header">
+        <h1>LOGIN</h1>
+      </div>
+      <div class="login__form">
+        <div class="login__form-title">
+          <h2>로그인</h2>
+        </div>
+        <div class="login__input-container">
+          <div class="id__container">
+            <input
+              type="text"
+              class="id__input"
+              placeholder="아이디"
+              id="loginId"
+            />
+          </div>
+          <div class="password__container">
+            <input
+              type="password"
+              class="password__input"
+              placeholder="비밀번호"
+              id="loginPassword"
+            />
+            <img
+              src="../../static/taekyungsa/images/icon/svg/View_hide_fill.svg"
+              alt="비밀번호 보기"
+              class="password-view"
+              id="passwordView"
+              draggable="false"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__footer">
+        <button type="button" class="login__button" id="loginButton">
+          login
+        </button>
+      </div>
+    </div>
+    <!-- //로그인 폼 -->
+  </div>
+
+  <!-- 아이디 공란 모달 -->
+  <div id="idBlankModal" class="modal">
+    <div class="modal__content">
+      <div class="modal__message-container">
+        <span class="modal__message">아이디를 입력해주세요.</span>
+      </div>
+      <button type="button" class="close-button">확인</button>
+    </div>
+  </div>
+  <!-- //아이디 공란 모달 -->
+
+  <!-- 비밀번호 공란 모달 -->
+  <div id="passwordBlankModal" class="modal">
+    <div class="modal__content">
+      <div class="modal__message-container">
+        <span class="modal__message">비밀번호를 입력해주세요.</span>
+      </div>
+      <button type="button" class="close-button">확인</button>
+    </div>
+  </div>
+  <!-- //비밀번호 공란 모달 -->
+
+  <!-- 아이디 오류 모달 -->
+  <div id="idErrorModal" class="modal">
+    <div class="modal__content">
+      <div class="modal__message-container">
+        <span class="modal__message">아이디 정보가 일치하지 않습니다.</span>
+      </div>
+      <button type="button" class="close-button">확인</button>
+    </div>
+  </div>
+  <!-- //아이디 오류 모달 -->
+
+  <!-- 비밀번호 오류 모달 -->
+  <div id="passwordErrorModal" class="modal">
+    <div class="modal__content">
+      <div class="modal__message-container">
+        <span class="modal__message">비밀번호 정보가 일치하지 않습니다.</span>
+      </div>
+      <button type="button" class="close-button">확인</button>
+    </div>
+  </div>
+  <!-- //비밀번호 오류 모달 -->
+
+  <!-- 스크립트 -->
+  <script src="../../static/taekyungsa/js/login/login.js"></script>
+</html>
